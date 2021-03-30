@@ -5,8 +5,6 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors 
 import matplotlib.pyplot as plt
 from modules.get_probable_images_vgg16 import vgg16_get_probable_images
-#from tqdm import tqdm
-#import tarfile
 
 import_method_choices = (("v0", "smallVGG16 (customized model)"),
                          ("v1", "Xception (pre-trained model)"),
