@@ -58,7 +58,7 @@ def get_probable_dirs(classified_result, img_db_path, is_show=False):
     # Enumerate all combinations and append to list
     # (type_combinations is "sorted")
     if is_show:
-        print("可能的分類:")
+        print("probable classes:")
         type_combinations = list()
         for color in colors:
             for category in categories:
