@@ -14,9 +14,9 @@ def _sort_listA_by_listB(listA, listB, order="desc"):
     # listB = [1, 3, 2]
     zipped_lists = zip(listB, listA)
     if order == "desc":
-        sorted_zipped_lists = sorted(zipped_lists, reverse=True) # 遞減
+        sorted_zipped_lists = sorted(zipped_lists, reverse=True)
     elif order == "asc":
-        sorted_zipped_lists = sorted(zipped_lists, reverse=False) # 遞增
+        sorted_zipped_lists = sorted(zipped_lists, reverse=False)
     sorted_listA = [element for _, element in sorted_zipped_lists]
     return sorted_listA
 
@@ -104,7 +104,7 @@ def vgg16_get_probable_images(img_path, img_db_path):
     probable_dirs = get_probable_dirs(classified_result, img_db_path, is_show)
     #print(probable_dirs)
     '''
-    可能的分類: (=> if is_show )
+    probable classes: (=> if is_show )
     灰色_洋裝類
     灰色_童裝類
     白色_洋裝類
