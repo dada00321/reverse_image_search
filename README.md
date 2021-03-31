@@ -8,6 +8,6 @@ result demonstration
 VGG16 model 
 ---
 
-(Can be downloaded and be used to construct model and labels as `model_path` and `labelbin_path` respectively in modules/get_probable_images_vgg16.py)
+Can be downloaded and be used to construct model and labels as `model_path` and `labelbin_path` respectively in modules/get_probable_images_vgg16.py
 
 <https://drive.google.com/drive/u/1/folders/1jICDYux79SSdCDWoDuyyAmHhe9Pef00l>
