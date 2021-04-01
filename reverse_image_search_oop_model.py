@@ -6,6 +6,12 @@ from sklearn.neighbors import NearestNeighbors
 import matplotlib.pyplot as plt
 from modules.get_probable_images_vgg16 import vgg16_get_probable_images
 
+# Suggestion: Use "v1" or "v2" as the reordering model,
+#             because the model of "v0" is already be used to
+#             seek for similar images in `ClothImageClassifier`,
+#             if using the same model again, the reordering
+#             process seems to be meaningless.
+#             ("v0" is merely a testing version.)
 import_method_choices = (("v0", "smallVGG16 (customized model)"),
                          ("v1", "Xception (pre-trained model)"),
                          ("v2", "ResNet50 (pre-trained model)"))
@@ -244,7 +250,12 @@ class ReverseImageSearch:
             #query_img_idx = 32
             #raw_img = img_list[query_img_idx]
             #   --- Option 2: Select by giving name of image ---
-            raw_img = "D:/MyPrograms/Python/py/專題/Cloth Image Classifier/dataset/img_db_3/000102_灰色_洋裝類/00000000 (21).jpg"
+            
+            raw_img = "D:/MyPrograms/Python/py/專題/Cloth Image Classifier/dataset/testing_data/2/GU_咖啡色_洋裝類.jpg"
+            #raw_img = "D:/MyPrograms/Python/py/專題/Cloth Image Classifier/dataset/testing_data/2/GU_白色_童裝類_Angela Mckay x H&M.jpg"
+            #raw_img = "D:/MyPrograms/Python/py/專題/Cloth Image Classifier/dataset/testing_data/2/UQ_黃色_襯衫類_POLO衫.jpg"
+            #raw_img = "D:/MyPrograms/Python/py/專題/Cloth Image Classifier/dataset/img_db_3/000102_灰色_洋裝類/00000000 (21).jpg"
+            
             querying_cv_img = self.preprocess_image(raw_img)
             
             ''' Get all images and build a model '''
@@ -290,8 +301,8 @@ if __name__ == "__main__":
     # =============================================================================
 
     method = "v2"  # method | choices: ("v1","v2","v3")
-    MAX_AMT = N = 30  # MAX_AMT must >= 30 | suggestion: 100
-    top_K = K = 30  # top_K must >= 10 | E.g., 20, 100, ...
+    MAX_AMT = N = 100  # MAX_AMT must >= 30 | suggestion: 100
+    top_K = K = 50  # top_K must >= 10 | E.g., 20, 100, ...
     
     ris = ReverseImageSearch(method, MAX_AMT, top_K)
     ris.exec_reverse_image_search()
