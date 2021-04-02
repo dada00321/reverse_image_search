@@ -300,7 +300,7 @@ if __name__ == "__main__":
     # MAX_AMT: Limiting the data for training
     # =============================================================================
 
-    method = "v2"  # method | choices: ("v1","v2","v3")
+    method = "v2"  # method | choices: ("v0","v1","v2")
     MAX_AMT = N = 100  # MAX_AMT must >= 30 | suggestion: 100
     top_K = K = 50  # top_K must >= 10 | E.g., 20, 100, ...
     
