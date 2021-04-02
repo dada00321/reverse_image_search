@@ -16,6 +16,7 @@ import_method_choices = (("v0", "smallVGG16 (customized model)"),
                          ("v1", "Xception (pre-trained model)"),
                          ("v2", "ResNet50 (pre-trained model)"))
 import_method = import_method_choices[2][0]
+
 if import_method == "v0":
     from tensorflow.keras.applications.vgg16 import preprocess_input
     from modules.v0_module import load_vgg_model
